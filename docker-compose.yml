@@ -13,7 +13,7 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile.apy
+      dockerfile: ./Dockerfile
     depends_on:
       - pap
     volumes:
