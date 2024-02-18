@@ -1,0 +1,22 @@
+version: '3'
+services:
+  pap:
+    build:
+      context: .
+      dockerfile: ./pap/Dockerfile
+      args:
+        url: https://github.com/kaser137/test.git
+        branch: master
+    volumes:
+    - ddd:/alex/test/
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.apy
+    depends_on:
+      - pap
+    volumes:
+      - ddd:/alex/Compose/
+volumes:
+  ddd:

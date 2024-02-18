@@ -9,4 +9,6 @@ COPY . .
 
 RUN pip install -r requirements.txt
 
+RUN ./manage.py migrate
+
 CMD ["./manage.py", "runserver", "0.0.0.0:8000"]
