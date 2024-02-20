@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   pap:
     build:
@@ -7,16 +8,23 @@ services:
       args:
         url: https://github.com/kaser137/test.git
         branch: master
+    environment:
+      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
+
     volumes:
-    - ddd:/alex/test/
+    - /home/alexander/projects/test/ddd:/alex/test/
 
   app:
     build:
       context: .
       dockerfile: ./Dockerfile
+#    command: ls -al ./venv/bin
+    environment:
+      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
     depends_on:
       - pap
     volumes:
-      - ddd:/alex/Compose/
-volumes:
-  ddd:
+      - /home/alexander/projects/test/ddd:/alex/test/
+#volumes:
+#  ddd:
+

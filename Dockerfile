@@ -1,14 +1,17 @@
 FROM python:alpine
 LABEL authors="alexander"
 
+ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+
+
 WORKDIR /alex/test/
 
 RUN python3 -m venv venv
 
-COPY . .
+#RUN pip install -r requirements.txt
 
-RUN pip install -r requirements.txt
+#RUN ./manage.py migrate
 
-RUN ./manage.py migrate
+#CMD ["./manage.py", "runserver", "0.0.0.0:8000"]
 
-CMD ["./manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["pip", "--version"]
