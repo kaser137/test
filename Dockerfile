@@ -8,7 +8,7 @@ WORKDIR /alex/test/
 
 RUN python3 -m venv venv
 
-#RUN pip install -r requirements.txt ff
+#RUN pip install -r requirements.txt ffrrr
 
 #if [ -d test/.git/ ]; then cd test && git pull; else rm -rf test && git clone  https://github.com/kaser137/test.git; fi
 
