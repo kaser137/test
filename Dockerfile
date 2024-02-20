@@ -8,7 +8,7 @@ WORKDIR /alex/test/
 
 RUN python3 -m venv venv
 
-#RUN pip install -r requirements.txt
+#RUN pip install -r requirements.txt ff
 
 #RUN ./manage.py migrate
 
