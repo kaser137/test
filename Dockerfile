@@ -3,12 +3,13 @@ LABEL authors="alexander"
 
 ENV GIT_DISCOVERY_ACROSS_FILESYSTEM=1
 
-
-WORKDIR /alex/test/
+RUN cd /alex/test/
 
 RUN python3 -m venv venv
 
-#RUN pip install -r requirements.txt ffrrr
+RUN source ./venv/bin/activate
+
+#RUN ./venv/bin/pip3 install -r requirements.txt PPPP
 
 #if [ -d test/.git/ ]; then cd test && git pull; else rm -rf test && git clone  https://github.com/kaser137/test.git; fi
 
