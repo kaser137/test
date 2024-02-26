@@ -1,4 +1,4 @@
 import time
 print("Hello assfull!")
-time.sleep(780)
+# time.sleep(5)
 print("END")
