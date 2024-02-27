@@ -1,4 +1,4 @@
 import time
-print("Hello assfull!")
+print("Hello honey-bunny!")
 time.sleep(720)
-print("quit all folks")
+print("I love you!")
