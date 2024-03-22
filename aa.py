@@ -1,4 +1,4 @@
 import time
-print("Hello honey-bunny! Miss you!")
+print("How do yuo do, my Darling?! I miss you!")
 time.sleep(720)
-print("let's rock & roll")
+print("let's get dance")
