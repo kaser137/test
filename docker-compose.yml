@@ -4,7 +4,7 @@ services:
   pap:
     build:
       context: .
-      dockerfile: app/Dockerfile.last
+      dockerfile: app/Dockerfile_nginx.last
       args:
         url: https://github.com/kaser137/test.git
         branch: master
