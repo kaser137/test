@@ -4,27 +4,31 @@ services:
   pap:
     build:
       context: .
-      dockerfile: ./pap/Dockerfile
+      dockerfile: app/Dockerfile.last
       args:
         url: https://github.com/kaser137/test.git
         branch: master
-    environment:
-      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
+        path: test
+#    environment:
+#      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
 
     volumes:
-    - /home/alexander/projects/test/ddd:/alex/test/
+    - ddd:/alex/test/
 
   app:
     build:
       context: .
-      dockerfile: ./Dockerfile
-#    command: ls -al ./venv/bin
-    environment:
-      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
+      dockerfile: ./Dockerfileapp
+#    command: sleep 720
+#    environment:
+#      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
     depends_on:
       - pap
+
     volumes:
-      - /home/alexander/projects/test/ddd:/alex/test/
-#volumes:
-#  ddd:
+
+      - ddd:/alex/test/
+
+volumes:
+  ddd:
 
