@@ -4,31 +4,42 @@ services:
   pap:
     build:
       context: .
-      dockerfile: app/Dockerfile_nginx.last
+      dockerfile: app/Dockerfile_app
       args:
         url: https://github.com/kaser137/test.git
         branch: master
         path: test
 #    environment:
 #      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
-
-    volumes:
-    - ddd:/alex/test/
-
-  app:
-    build:
-      context: .
-      dockerfile: ./Dockerfileapp
-#    command: sleep 720
-#    environment:
-#      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
-    depends_on:
-      - pap
-
-    volumes:
-
-      - ddd:/alex/test/
-
-volumes:
-  ddd:
+#
+#    volumes:
+#    - ddd:/alex/test/
+  nginx:
+     build:
+       context: .
+       dockerfile: nginx/Dockerfile_nginx
+#     volumes:
+#       - static_volume:/home/star-burger/web/staticfiles
+#       - media_volume:/home/star-burger/web/mediafiles
+     ports:
+       - "7000:80"
+#     restart: always
+     depends_on:
+       - pap
+#  app:
+#    build:
+#      context: .
+#      dockerfile: ./Dockerfileapp
+##    command: sleep 720
+##    environment:
+##      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
+#    depends_on:
+#      - pap
+#
+#    volumes:
+#
+#      - ddd:/alex/test/
+#
+#volumes:
+#  ddd:
 
