@@ -9,10 +9,10 @@ services:
         url: https://github.com/kaser137/test.git
         branch: master
         path: test
-    ports:
-      - "5000:5000"
-    environment:
-      ALLOWED_HOSTS: pap test *
+#    ports:
+#      - "5000:5000"
+#    environment:
+#      ALLOWED_HOSTS: pap test *
 #    environment:
 #      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
 #
@@ -26,7 +26,7 @@ services:
 #       - static_volume:/home/star-burger/web/staticfiles
 #       - media_volume:/home/star-burger/web/mediafiles
      ports:
-       - "7000:80"
+       - "1000:80"
 #     restart: always
      depends_on:
        - pap
