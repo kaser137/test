@@ -9,6 +9,8 @@ services:
         url: https://github.com/kaser137/test.git
         branch: master
         path: test
+    ports:
+      - "5000:5000"
 #    environment:
 #      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
 #
