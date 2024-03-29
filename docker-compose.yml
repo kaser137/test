@@ -12,7 +12,7 @@ services:
     ports:
       - "5000:5000"
     environment:
-      ALLOWED_HOSTS: *
+      ALLOWED_HOSTS: pap test *
 #    environment:
 #      GIT_DISCOVERY_ACROSS_FILESYSTEM: 1
 #
