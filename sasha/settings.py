@@ -88,7 +88,7 @@ DATABASES = {
         'NAME': 'sb',
         'USER': 'sbu',
         'PASSWORD': 'sbp',
-        'HOST': ' localhost',
+        'HOST': ' http://0.0.0.0',
         'PORT': '5432',
     },
     # 'default': dj_database_url.config(
