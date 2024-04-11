@@ -1,15 +1,9 @@
-box_block {
-    margin: 0px;
-    padding: 0px;
-    overflow: hidden;
-    text-align: center;
-}
-box_block li {
+li {
     list-style: none;
     display: inline;
     border: 1px solid #cccccc;
 }
-box_div {
+div {
     width: 1150px;
     background: #c0ffee;
 }

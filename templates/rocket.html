@@ -10,12 +10,12 @@
 <body>
 <h1 style="text-align: center">
     PLEASE, CHOOSE YOUR SHIP FOR TRIP, MY ASTRONAUT:
-    <div class="wa box_div">
-        <ul class="box_block">
-        {% for rocket in rockets %}
-            <li>{{rocket.name}}</li>
-        {% endfor %}
-    </ul>
+    <div>
+        <ul>
+            {% for rocket in rockets %}
+                <li>{{rocket.name}}</li>
+            {% endfor %}
+        </ul>
     </div>
 
 
