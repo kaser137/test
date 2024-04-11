@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+{% load static %}
+ <link rel="stylesheet" href='st.css'>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,8 +9,8 @@
 <body>
 <h1 style="text-align: center">
     PLEASE, CHOOSE YOUR SHIP, MY ASTRONAUT:
-    <div style="text-align: center">
-        <ul class="inside">
+    <div class="wa box_div">
+        <ul class="box_block">
         {% for rocket in rockets %}
             <li>{{rocket.name}}</li>
         {% endfor %}
