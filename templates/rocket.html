@@ -6,6 +6,11 @@
 </head>
 <body>
 <h1 style="text-align: center">
+    <ul>
+        {% for rocket in rockets %}
+            <li>{{rocket.name}}</li>
+        {% endfor %}
+    </ul>
     I LOVE YOU, MY HONEY! {{rocket.name}}
 </h1>
 </body>

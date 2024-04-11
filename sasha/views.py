@@ -11,6 +11,6 @@ def rocket(request):
     rockets = Rocket.objects.all()
     rocket = rockets[0]
     context = {
-        'rocket': rocket
+        'rockets': rockets
     }
     return render(request, template_name="rocket.html", context=context)
