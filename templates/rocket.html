@@ -7,11 +7,14 @@
 <body>
 <h1 style="text-align: center">
     PLEASE, CHOOSE YOUR SHIP, MY ASTRONAUT:
-    <ul class="inside">
+    <div style="text-align: center">
+        <ul class="inside">
         {% for rocket in rockets %}
             <li>{{rocket.name}}</li>
         {% endfor %}
     </ul>
+    </div>
+
 
 </h1>
 </body>
