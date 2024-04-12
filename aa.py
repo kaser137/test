@@ -3,8 +3,8 @@
 # import time
 
 # load_dotenv()
-print("MIMIMIMIMIMI")
+print("M`````````````````````````````")
 # time.sleep(720)
-print("555555555555")
+print("vvvvvvvvvvvvvvvvvvvvvvvv")
 # a = os.getenv('app_name')
 # print(a)
